@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
     private func printStringWithDelay(string: String) {
         var index = string.startIndex
       
-        Timer.scheduledTimer(withTimeInterval: 0.15, repeats: true) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 0.06, repeats: true) { (timer) in
             self.welcomeLabel.text?.append(string[index])
 
             index = string.index(after: index)
