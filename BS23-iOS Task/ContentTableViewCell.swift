@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ContentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var runtimeLabel: UILabel!
-    @IBOutlet weak var tvshowImage: UIImageView!
+    @IBOutlet weak var movieImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        tvshowImage.layer.cornerRadius = 8.0
-        tvshowImage.clipsToBounds = true
+        movieImage.layer.cornerRadius = 8.0
+        movieImage.clipsToBounds = true
     }
     
   /*  func setUI(tvshow: TVShow) {

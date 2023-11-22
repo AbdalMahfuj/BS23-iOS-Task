@@ -86,6 +86,10 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="movieImage" destination="ptX-lf-d1w" id="PBX-Gz-5EE"/>
+                <outlet property="nameLabel" destination="OnB-c5-pxP" id="Org-Rc-F4a"/>
+            </connections>
             <point key="canvasLocation" x="49" y="31"/>
         </tableViewCell>
     </objects>

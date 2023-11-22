@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DashboardViewController: UIViewController {
     
     @IBOutlet weak var moviesTableView: UITableView!
     @IBOutlet weak var movieSearchbar: UISearchBar!
     
+    
+    let apiKey = "b2fb874a21f88f43e69c6491a6f49e00"
     var results: [Movie] = []
+    
     
     class func initVC()->DashboardViewController {
         let board = UIStoryboard(name: "Main", bundle: nil)
@@ -47,9 +51,7 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController { // API 
     private func fetchTVShow(with query: String) {
       //  SVProgressHUD.show()
-        // https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1
-        let urlString = "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1"
-        
+        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=b2fb874a21f88f43e69c6491a6f49e00&query=marvel"
         APIManager.shared.callService(urlString: urlString, method: "GET", body: nil) { [weak self] data in
             DispatchQueue.main.async {
      //           SVProgressHUD.dismiss()
@@ -59,10 +61,11 @@ extension DashboardViewController { // API
                 }
                 if let data = data {
                     do {
-                        weakSelf.results  = try JSONDecoder().decode([Movie].self, from: data)
-                        //                    weakSelf.results = [singleresule]
+                        let decoder = JSONDecoder()
+                        let movieResponse = try decoder.decode(MovieResponse.self, from: data)
+                        weakSelf.results  = movieResponse.movies ?? []
                         weakSelf.moviesTableView.reloadData()
-                        print(weakSelf.results.count)
+                        print("movies count: \(weakSelf.results.count)")
                     }
                     catch {
                         print(error)

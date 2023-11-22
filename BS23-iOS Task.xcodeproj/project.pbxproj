@@ -20,6 +20,7 @@
 		C1FD06392B0E8AA500A54C96 /* ContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06382B0E8AA500A54C96 /* ContentTableViewCell.swift */; };
 		C1FD063B2B0E8AC200A54C96 /* DetailShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD063A2B0E8AC200A54C96 /* DetailShowViewController.swift */; };
 		C1FD063D2B0E91E000A54C96 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD063C2B0E91E000A54C96 /* APIManager.swift */; };
+		C1FD06412B0E9CF200A54C96 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C1FD06402B0E9CF200A54C96 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FD06412B0E9CF200A54C96 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 				C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */,
 				C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */,
 				C1FD06222B0E7CF100A54C96 /* Info.plist */,
-				C1FD063E2B0E922B00A54C96 /* API */,
+				C1FD063E2B0E922B00A54C96 /* Network */,
 				C1FD06282B0E818C00A54C96 /* SplashViewController.swift */,
 				C1FD06302B0E88D900A54C96 /* ContentTableViewCell.xib */,
 				C1FD06182B0E7CEE00A54C96 /* ViewController.swift */,
@@ -88,12 +90,12 @@
 			path = "BS23-iOS Task";
 			sourceTree = "<group>";
 		};
-		C1FD063E2B0E922B00A54C96 /* API */ = {
+		C1FD063E2B0E922B00A54C96 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				C1FD063C2B0E91E000A54C96 /* APIManager.swift */,
 			);
-			path = API;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +114,9 @@
 			dependencies = (
 			);
 			name = "BS23-iOS Task";
+			packageProductDependencies = (
+				C1FD06402B0E9CF200A54C96 /* SDWebImage */,
+			);
 			productName = "BS23-iOS Task";
 			productReference = C1FD06112B0E7CEE00A54C96 /* BS23-iOS Task.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +145,9 @@
 				Base,
 			);
 			mainGroup = C1FD06082B0E7CEE00A54C96;
+			packageReferences = (
+				C1FD063F2B0E9CF200A54C96 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = C1FD06122B0E7CEE00A54C96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1FD063F2B0E9CF200A54C96 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1FD06402B0E9CF200A54C96 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FD063F2B0E9CF200A54C96 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1FD06092B0E7CEE00A54C96 /* Project object */;
 }
