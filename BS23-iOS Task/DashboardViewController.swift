@@ -136,7 +136,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if currentPage <= totalPages && indexPath.row == results.count - 1 - 8 {
             print("fetch API")
-            loadData(starting: false)
+         //   loadData(starting: false)
         }
     }
 }
