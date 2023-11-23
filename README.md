@@ -14,7 +14,7 @@ iOS Practical Test
 
 ## Overview
 
-This is an iOS application that allows users to explore a curated list of movies. Users can view a list of movies, access detailed information about each movie from Themoviedb.org free API.
+This is an iOS application that allows users to explore a curated list of movies. Users can view a list of movies, access detailed information about each movie and can search movie from Themoviedb.org free API.
 
 ## Features
 
