@@ -31,8 +31,10 @@ class APIManager: NSObject {
         super.init()
     }
     
-    func fetchMovies(page: Int, queryString: String, method: RequestMethod,  body: [String: Any]?, onComplete: @escaping (([Movie]?, _ totatPages: Int?)->())) {
+    
+    func fetchMovies(page: Int, queryString: String, method: RequestMethod,  body: [String: Any]?, onComplete: @escaping (([MovieModel]?, _ totatPages: Int?)->())) {
         let apiString = "https://api.themoviedb.org/3/search/movie?api_key=\(APIConstant.apiKey)&query=\(queryString)&page=\(page)"
+        
         guard let url = URL(string: apiString) else {
             onComplete(nil, nil)
             return
@@ -50,7 +52,7 @@ class APIManager: NSObject {
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, _, error) in
             
-#if DEBUG
+            #if DEBUG
             if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: [])
                 
@@ -63,7 +65,7 @@ class APIManager: NSObject {
                 }
             }
             
-#endif
+            #endif
             
             if let data = data {
                 do {
