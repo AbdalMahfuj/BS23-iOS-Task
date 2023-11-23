@@ -35,14 +35,14 @@ class DetailShowViewController: UIViewController {
     
     
     func setUI(movie: Movie) {
-        titleLabel.text = "Title: \(movie.title ?? "N/A")"
-        popularityLabel.text = "Popularity: \(movie.popularity ?? 0.0)"
-        releaseDateLabel.text = "Release Date: \(movie.release_date ?? "N/A")"
-        voteAverageLabel.text = "Vote Average: \(movie.vote_average ?? 0.0)"
+        titleLabel.text = "\(movie.title ?? "N/A")"
+        popularityLabel.text = "\(movie.popularity ?? 0.0)"
+        releaseDateLabel.text = "\(movie.release_date ?? "N/A")"
+        voteAverageLabel.text = "\(movie.vote_average ?? 0.0) (\(movie.vote_count ?? 0))"
         
         if let desc = movie.overview, desc.count > 0 {
             if let attributedString = try? NSAttributedString(data: Data(desc.utf8), options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
-                descriptionLabel.text = "Summary: \(attributedString.string)"
+                descriptionLabel.text = "\(attributedString.string)"
             }
         }
        

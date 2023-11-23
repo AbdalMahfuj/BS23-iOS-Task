@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C191DCE92B0F09B4004D7D8B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191DCE82B0F09B4004D7D8B /* Extension.swift */; };
+		C191DCEB2B0F368E004D7D8B /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191DCEA2B0F368E004D7D8B /* APIConstant.swift */; };
 		C1FD06152B0E7CEE00A54C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */; };
 		C1FD06172B0E7CEE00A54C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */; };
 		C1FD06192B0E7CEE00A54C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06182B0E7CEE00A54C96 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		C191DCE82B0F09B4004D7D8B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		C191DCEA2B0F368E004D7D8B /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		C1FD06112B0E7CEE00A54C96 /* BS23-iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BS23-iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				C1FD063C2B0E91E000A54C96 /* APIManager.swift */,
+				C191DCEA2B0F368E004D7D8B /* APIConstant.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C1FD06372B0E8A8600A54C96 /* DashboardViewController.swift in Sources */,
 				C1FD06152B0E7CEE00A54C96 /* AppDelegate.swift in Sources */,
 				C1FD063D2B0E91E000A54C96 /* APIManager.swift in Sources */,
+				C191DCEB2B0F368E004D7D8B /* APIConstant.swift in Sources */,
 				C1FD062D2B0E884600A54C96 /* Model.swift in Sources */,
 				C191DCE92B0F09B4004D7D8B /* Extension.swift in Sources */,
 				C1FD063B2B0E8AC200A54C96 /* DetailShowViewController.swift in Sources */,

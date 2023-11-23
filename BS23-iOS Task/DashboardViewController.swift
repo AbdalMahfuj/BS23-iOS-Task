@@ -32,6 +32,8 @@ class DashboardViewController: UIViewController {
         moviesTableView.register(UINib(nibName: "ContentTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTableViewCell")
         searchbar.delegate = self
         self.navigationItem.title = "Dashboard"
+        
+        fetchMovies(starting: true)
     }
     
     
@@ -41,12 +43,6 @@ class DashboardViewController: UIViewController {
         navigationItem.setHidesBackButton(true, animated: true)
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        fetchMovies(starting: true)
-    }
     
     private func showLoader() {
         activityView.isHidden = false
@@ -60,7 +56,15 @@ class DashboardViewController: UIViewController {
     }
 }
 
+// MARK: - Searchbar
 extension DashboardViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            searchBar.resignFirstResponder()
+            fetchMovies(starting: true)
+        }
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         clear()
@@ -115,56 +119,6 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - API
 extension DashboardViewController {
-    
-   /* func loadData(starting: Bool, query: String) {
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(searchbar.text!)&page=3"
-        guard isFetching == false else { return }
-        
-        if starting {
-            currentPage = 1
-            showLoader()
-            moviesTableView.setContentOffset(.zero, animated: true)
-        }
-        
-        print("load-data \(currentPage)")
-        
-        isFetching = true
-        
-        APIManager.shared.callService(urlString: urlString, method: "GET", body: nil) { [weak self] data in
-            if starting {
-                self?.hideLoader()
-            }
-            guard let weakSelf = self else {
-                return
-            }
-            if let data = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let movieResponse = try decoder.decode(MovieResponse.self, from: data)
-                    
-                    if starting {
-                        weakSelf.results  = movieResponse.movies ?? []
-                    } else {
-                        weakSelf.results += movieResponse.movies ?? []
-                    }
-                    DispatchQueue.main.async {
-                        weakSelf.moviesTableView.reloadData()
-                    }
-                    print("movies count: \(weakSelf.results.count)")
-                    self?.currentPage += 1
-                    self?.totalPages = movieResponse.totalPages ?? .max
-                }
-                catch {
-                    print(error)
-                }
-                print("task ok")
-            } else {
-                print("medicine is not available for page: \(self!.currentPage)")
-            }
-            self?.isFetching = false
-        }
-    } */
-    
     private func fetchMovies(starting: Bool) {
         if starting {
             currentPage = 1
@@ -177,33 +131,22 @@ extension DashboardViewController {
         } else {
             query = searchbar.text!
         }
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(query)&page=\(currentPage)"
-        APIManager.shared.callService(urlString: urlString, method: "GET", body: nil) { [weak self] data in
-            DispatchQueue.main.async {
-                self!.hideLoader()
-                guard let weakSelf = self else {
-                    return
-                }
-                if let data = data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let movieResponse = try decoder.decode(MovieResponse.self, from: data)
-                        
-                        if starting {
-                            weakSelf.results  = movieResponse.movies ?? []
-                        } else {
-                            weakSelf.results += movieResponse.movies ?? []
-                        }
-                        
-                        self?.currentPage += 1
-                        self?.totalPages = movieResponse.totalPages ?? .max
-                        weakSelf.moviesTableView.reloadData()
-                        print("movies count: \(weakSelf.results.count)")
+        
+        APIManager.shared.fetchMovies(page: currentPage, queryString: query, method: .get, body: nil) { movies, total_page in
+            if let movies = movies {
+                DispatchQueue.main.async {
+                    self.hideLoader()
+                    
+                    if starting {
+                        self.results  = movies
+                    } else {
+                        self.results += movies
                     }
-                    catch {
-                        print(error)
-                    }
-                    print("task ok")
+                    
+                    self.currentPage += 1
+                    self.totalPages = total_page ?? .max
+                    self.moviesTableView.reloadData()
+                    print("movies count: \(self.results.count)")
                 }
             }
         }
