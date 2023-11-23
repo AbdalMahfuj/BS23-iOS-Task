@@ -17,12 +17,12 @@ iOS Practical Test
 
 This is an iOS application that allows users to explore a curated list of movies. Users can view a list of movies, access detailed information about each movie and can search movie from Themoviedb.org free API.
 
-1. I used the API from Themoviedb.org, that shows movie list, and help to search movie based on title.
-2. API link: "https://api.themoviedb.org/3/search/movie?api_key=\(APIConstant.apiKey)&query=\(queryString)&page=\(page)"
-3. api_key:  Got token from Themoviedb.org. 'Query' is from search text. If the search field is empty, I show the list with "marvel" query as for empty search no result is being responded.
-4. And 'page' paramter is used for pagination.
-5. For networking, I used URLSession
-6. Architectural design pattern: MVVM
+-  I used the API from Themoviedb.org, that shows movie list, and help to search movie based on title.
+-  API link: "https://api.themoviedb.org/3/search/movie?api_key=\(APIConstant.apiKey)&query=\(queryString)&page=\(page)"
+-  api_key:  Got token from Themoviedb.org. 'Query' is from search text. If the search field is empty, I show the list with "marvel" query as for empty search no result is being responded.
+-  And 'page' paramter is used for pagination.
+-  For networking, I used URLSession
+-  Architectural design pattern: MVVM
 
 ## Features
 
