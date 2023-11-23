@@ -12,9 +12,9 @@ class DetailShowViewController: UIViewController {
     @IBOutlet weak var detailImage          : UIImageView!
     @IBOutlet weak var titleLabel           : UILabel!
     @IBOutlet weak var descriptionLabel     : UILabel!
-    @IBOutlet weak var popularityLabel          : UILabel!
-    @IBOutlet weak var releaseDateLabel         : UILabel!
-    @IBOutlet weak var voteAverageLabel        : UILabel!
+    @IBOutlet weak var popularityLabel      : UILabel!
+    @IBOutlet weak var releaseDateLabel     : UILabel!
+    @IBOutlet weak var voteAverageLabel     : UILabel!
     
     var result: Movie?
     let posterPath = "https://image.tmdb.org/t/p/original"

@@ -74,7 +74,7 @@ class APIManager: NSObject {
                 let json = try? JSONSerialization.jsonObject(with: data, options: [])
                 
                 if let json = json {
-                    let string = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+                    let _ = String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
                     print(json)
                 }
                 else {

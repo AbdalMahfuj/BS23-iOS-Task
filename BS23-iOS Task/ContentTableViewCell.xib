@@ -23,14 +23,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-5z-bTY">
                                 <rect key="frame" x="12" y="12" width="285" height="154"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-lf-d1w">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ptX-lf-d1w">
                                         <rect key="frame" x="0.0" y="0.0" width="114" height="152"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ptX-lf-d1w" secondAttribute="height" multiplier="9:12" id="8xm-sz-OvG"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jrp-k4-mo0">
-                                        <rect key="frame" x="139" y="0.0" width="146" height="81"/>
+                                        <rect key="frame" x="139" y="0.0" width="146" height="113"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-c5-pxP">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="17"/>
@@ -46,6 +46,12 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realse Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-hC-atq">
                                                 <rect key="frame" x="0.0" y="64" width="77" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzr-SQ-SyJ" userLabel="Rating">
+                                                <rect key="frame" x="0.0" y="96" width="41.5" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -87,8 +93,10 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="containerView" destination="xyi-WT-dtT" id="h4V-4m-YJ7"/>
                 <outlet property="movieImage" destination="ptX-lf-d1w" id="PBX-Gz-5EE"/>
                 <outlet property="popularityLabel" destination="jWe-zu-Ka2" id="NWd-lo-Ra8"/>
+                <outlet property="ratingLabel" destination="Bzr-SQ-SyJ" id="xZh-da-hqT"/>
                 <outlet property="releaseDateLabel" destination="ekP-hC-atq" id="VlZ-1r-6be"/>
                 <outlet property="titleLabel" destination="OnB-c5-pxP" id="Org-Rc-F4a"/>
             </connections>
@@ -96,6 +104,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="placeholder" width="150" height="150"/>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

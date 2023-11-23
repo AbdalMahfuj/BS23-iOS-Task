@@ -14,11 +14,11 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var searchbar        : UISearchBar!
     @IBOutlet weak var activityView     : UIActivityIndicatorView!
     
-    let apiKey = "b2fb874a21f88f43e69c6491a6f49e00"
     var results: [Movie] = []
     private var isFetching: Bool = false
     private var currentPage = 1
     private var totalPages = 1
+    
     
     class func initVC()->DashboardViewController {
         let board = UIStoryboard(name: "Main", bundle: nil)
@@ -26,12 +26,13 @@ class DashboardViewController: UIViewController {
         return vc
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        moviesTableView.register(UINib(nibName: "ContentTableViewCell", bundle: nil), forCellReuseIdentifier: "ContentTableViewCell")
+        moviesTableView.register(UINib(nibName: "ContentTableViewCell", bundle: nil), forCellReuseIdentifier: ContentTableViewCell.identifier)
         searchbar.delegate = self
-        self.navigationItem.title = "Dashboard"
+        self.navigationItem.title = "Movie List"
         
         fetchMovies(starting: true)
     }
@@ -51,8 +52,10 @@ class DashboardViewController: UIViewController {
     
     
     private func hideLoader() {
-        activityView.isHidden = true
-        activityView.stopAnimating()
+        DispatchQueue.main.async {
+            self.activityView.isHidden = true
+            self.activityView.stopAnimating()
+        }
     }
 }
 
@@ -60,7 +63,9 @@ class DashboardViewController: UIViewController {
 extension DashboardViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            searchBar.resignFirstResponder()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
             fetchMovies(starting: true)
         }
     }
@@ -72,15 +77,15 @@ extension DashboardViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-
+        
         fetchMovies(starting: true)
-    /*    if let text = searchBar.text, text.count > 0 {
-            clear()
-            fetchMovies(starting: true)
-        }
-        else {
-            clear()
-        } */
+        /*    if let text = searchBar.text, text.count > 0 {
+         clear()
+         fetchMovies(starting: true)
+         }
+         else {
+         clear()
+         } */
     }
     
     func clear() {
@@ -133,10 +138,9 @@ extension DashboardViewController {
         }
         
         APIManager.shared.fetchMovies(page: currentPage, queryString: query, method: .get, body: nil) { movies, total_page in
+            self.hideLoader()
             if let movies = movies {
                 DispatchQueue.main.async {
-                    self.hideLoader()
-                    
                     if starting {
                         self.results  = movies
                     } else {
