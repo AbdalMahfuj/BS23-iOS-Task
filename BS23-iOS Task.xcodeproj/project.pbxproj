@@ -27,7 +27,6 @@
 
 /* Begin PBXFileReference section */
 		C191DCEA2B0F368E004D7D8B /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
-		C191DCF02B0F63DF004D7D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C191DCF52B0F6630004D7D8B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C191DCF62B0F6630004D7D8B /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C191DD052B0F6699004D7D8B /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		C191DD122B0F66C3004D7D8B /* MovieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		C191DD152B0F66E1004D7D8B /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C191DD172B0F670E004D7D8B /* MoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		C191DD192B0F847F004D7D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1FD06112B0E7CEE00A54C96 /* BS23-iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BS23-iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FD061B2B0E7CEE00A54C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +147,7 @@
 		C1FD06132B0E7CEE00A54C96 /* BS23-iOS Task */ = {
 			isa = PBXGroup;
 			children = (
+				C191DD192B0F847F004D7D8B /* Info.plist */,
 				C191DD112B0F66C3004D7D8B /* Models */,
 				C191DCF42B0F6630004D7D8B /* Main */,
 				C191DD032B0F6699004D7D8B /* Modules */,
@@ -154,7 +155,6 @@
 				C191DD142B0F66E1004D7D8B /* Utility */,
 				C191DCED2B0F5629004D7D8B /* Storyboards */,
 				C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */,
-				C191DCF02B0F63DF004D7D8B /* Info.plist */,
 			);
 			path = "BS23-iOS Task";
 			sourceTree = "<group>";
