@@ -37,7 +37,6 @@
 		C1FD061B2B0E7CEE00A54C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1FD06202B0E7CF100A54C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C1FD06222B0E7CF100A54C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1FD06282B0E818C00A54C96 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		C1FD062C2B0E884600A54C96 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C1FD06302B0E88D900A54C96 /* ContentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentTableViewCell.xib; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 				C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */,
 				C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */,
 				C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */,
-				C1FD06222B0E7CF100A54C96 /* Info.plist */,
 				C1FD063E2B0E922B00A54C96 /* Network */,
 				C191DCEC2B0F54FC004D7D8B /* Model */,
 				C1FD06282B0E818C00A54C96 /* SplashViewController.swift */,
