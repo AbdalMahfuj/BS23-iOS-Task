@@ -33,7 +33,7 @@ class APIManager: NSObject {
     
     
     func fetchMovies(page: Int, queryString: String, method: RequestMethod,  body: [String: Any]?, onComplete: @escaping (([MovieModel]?, _ totatPages: Int?)->())) {
-        let apiString = "https://api.themoviedb.org/3/search/movie?api_key=\(APIConstant.apiKey)&query=\(queryString)&page=\(page)"
+        let apiString = APIConstant.movieApi + "\(APIConstant.apiKey)&query=\(queryString)&page=\(page)"
         
         guard let url = URL(string: apiString) else {
             onComplete(nil, nil)
