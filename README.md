@@ -52,11 +52,10 @@ This is an iOS application that allows users to explore a curated list of movies
 2. For physical device it need to sign in with apple id.
 
 ## Screenshots
-![IMG_0230](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/701b9c5f-f128-4bad-8d5b-bdf5eba2aa02)
+![IMG_0230](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/6df8c7ff-14ff-4db7-9d77-96962aa6ce0b)    ![IMG_0231](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/ffe0f4f1-3d2c-46c1-a892-f5e00294514c)        ![IMG_0232](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/09e13c4e-1395-46d2-9235-d5661c02e1de)
 
-![IMG_023![IMG_0232](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/1c1ce034-4093-4008-bb38-0a883349e132)
 
-![IMG_0232](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/9a83ac0a-c101-49a2-90fa-1a3bbea4a7a5)
+
 
 
 ## Acknowledgments
