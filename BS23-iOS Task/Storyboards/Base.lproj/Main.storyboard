@@ -132,7 +132,7 @@ iOS Practical Test</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgB-9g-m9I">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="624.66666666666663"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qly-H9-Wd5">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="qly-H9-Wd5">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qly-H9-Wd5" secondAttribute="height" id="OMY-UE-qJX"/>
