@@ -1,7 +1,7 @@
 # BS23-iOS-Task
 Assignment: iOS Task
 
-|-------------------------------------------------------------------------------|
+
 |                                                                               |
 |                   Brain Station 23 Ltd. iOS Practical Test                    |
 |                       **Name: Abdullah Al Mahfug                              |
