@@ -53,8 +53,10 @@ This is an iOS application that allows users to explore a curated list of movies
 
 ## Screenshots
 ![IMG_0230](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/701b9c5f-f128-4bad-8d5b-bdf5eba2aa02)
+
 ![IMG_023![IMG_0232](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/1c1ce034-4093-4008-bb38-0a883349e132)
-1](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/505b38de-8b34-4ce0-a67a-f1c72f27a5f8)
+
+![IMG_0232](https://github.com/AbdalMahfuj/BS23-iOS-Task/assets/54243174/9a83ac0a-c101-49a2-90fa-1a3bbea4a7a5)
 
 
 ## Acknowledgments
