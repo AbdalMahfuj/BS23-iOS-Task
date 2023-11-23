@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C191DCE92B0F09B4004D7D8B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C191DCE82B0F09B4004D7D8B /* Extension.swift */; };
 		C1FD06152B0E7CEE00A54C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */; };
 		C1FD06172B0E7CEE00A54C96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */; };
 		C1FD06192B0E7CEE00A54C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD06182B0E7CEE00A54C96 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C191DCE82B0F09B4004D7D8B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C1FD06112B0E7CEE00A54C96 /* BS23-iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BS23-iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				C1FD06362B0E8A8600A54C96 /* DashboardViewController.swift */,
 				C1FD06382B0E8AA500A54C96 /* ContentTableViewCell.swift */,
 				C1FD063A2B0E8AC200A54C96 /* DetailShowViewController.swift */,
+				C191DCE82B0F09B4004D7D8B /* Extension.swift */,
 			);
 			path = "BS23-iOS Task";
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				C1FD06152B0E7CEE00A54C96 /* AppDelegate.swift in Sources */,
 				C1FD063D2B0E91E000A54C96 /* APIManager.swift in Sources */,
 				C1FD062D2B0E884600A54C96 /* Model.swift in Sources */,
+				C191DCE92B0F09B4004D7D8B /* Extension.swift in Sources */,
 				C1FD063B2B0E8AC200A54C96 /* DetailShowViewController.swift in Sources */,
 				C1FD06392B0E8AA500A54C96 /* ContentTableViewCell.swift in Sources */,
 				C1FD06172B0E7CEE00A54C96 /* SceneDelegate.swift in Sources */,

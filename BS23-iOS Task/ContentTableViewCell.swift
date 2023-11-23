@@ -10,10 +10,10 @@ import SDWebImage
 
 class ContentTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var runtimeLabel: UILabel!
-    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var titleLabel           : UILabel!
+    @IBOutlet weak var popularityLabel      : UILabel!
+    @IBOutlet weak var releaseDateLabel     : UILabel!
+    @IBOutlet weak var movieImage           : UIImageView!
     
     static let identifier = "ContentTableViewCell"
     
@@ -26,14 +26,20 @@ class ContentTableViewCell: UITableViewCell {
     }
     
     func setUI(movie: Movie) {
-        nameLabel.text = movie.title
-//        scoreLabel.text = "Score: " + String(format: "%0.2f", tvshow.score ?? 0.0)
-//        runtimeLabel.text = "Runtime: \(tvshow.details?.runtime ?? 0.0) m"
+        titleLabel.text = movie.title
+        popularityLabel.text = "Popularity: " + String(format: "%0.2f", movie.popularity ?? 0.0)
+        releaseDateLabel.text = "Release Date: \(movie.release_date ?? "N/A")"
         if let urlString = movie.poster_path, let url = URL(string: posterPath + urlString) {
-            movieImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"), context: nil)
+            movieImage.load(url: url)
         } else {
             movieImage.image = UIImage(named: "placeholder")
         }
+        
+      /*  if let urlString = movie.poster_path, let url = URL(string: posterPath + urlString) {
+            movieImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"), context: nil)
+        } else {
+            movieImage.image = UIImage(named: "placeholder")
+        } */
     }
     
 }

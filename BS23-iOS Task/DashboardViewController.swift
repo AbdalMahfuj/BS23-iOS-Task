@@ -59,36 +59,6 @@ class DashboardViewController: UIViewController {
     }
 }
 
-
-extension DashboardViewController { // API 
-    private func fetchTVShow(with query: String) {
-        showLoader()
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(query)"
-        APIManager.shared.callService(urlString: urlString, method: "GET", body: nil) { [weak self] data in
-            DispatchQueue.main.async {
-                self!.hideLoader()
-                guard let weakSelf = self else {
-                    return
-                }
-                if let data = data {
-                    do {
-                        let decoder = JSONDecoder()
-                        let movieResponse = try decoder.decode(MovieResponse.self, from: data)
-                        self?.totalPages = movieResponse.totalPages ?? .max
-                        weakSelf.results  = movieResponse.movies ?? []
-                        weakSelf.moviesTableView.reloadData()
-                        print("movies count: \(weakSelf.results.count)")
-                    }
-                    catch {
-                        print(error)
-                    }
-                    print("task ok")
-                }
-            }
-        }
-    }
-}
-
 extension DashboardViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
@@ -137,6 +107,36 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         if currentPage <= totalPages && indexPath.row == results.count - 1 - 8 {
             print("fetch API")
          //   loadData(starting: false)
+        }
+    }
+}
+
+// MARK: - API
+extension DashboardViewController {
+    private func fetchTVShow(with query: String) {
+        showLoader()
+        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&query=\(query)"
+        APIManager.shared.callService(urlString: urlString, method: "GET", body: nil) { [weak self] data in
+            DispatchQueue.main.async {
+                self!.hideLoader()
+                guard let weakSelf = self else {
+                    return
+                }
+                if let data = data {
+                    do {
+                        let decoder = JSONDecoder()
+                        let movieResponse = try decoder.decode(MovieResponse.self, from: data)
+                        self?.totalPages = movieResponse.totalPages ?? .max
+                        weakSelf.results  = movieResponse.movies ?? []
+                        weakSelf.moviesTableView.reloadData()
+                        print("movies count: \(weakSelf.results.count)")
+                    }
+                    catch {
+                        print(error)
+                    }
+                    print("task ok")
+                }
+            }
         }
     }
 }

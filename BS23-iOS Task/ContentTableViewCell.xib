@@ -30,23 +30,23 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jrp-k4-mo0">
-                                        <rect key="frame" x="139" y="0.0" width="146" height="92.5"/>
+                                        <rect key="frame" x="139" y="0.0" width="146" height="81"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnB-c5-pxP">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="21.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWe-zu-Ka2">
-                                                <rect key="frame" x="0.0" y="36.5" width="44.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jWe-zu-Ka2">
+                                                <rect key="frame" x="0.0" y="32" width="65" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runtime" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-hC-atq">
-                                                <rect key="frame" x="0.0" y="72" width="63" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realse Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-hC-atq">
+                                                <rect key="frame" x="0.0" y="64" width="77" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -88,7 +88,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="movieImage" destination="ptX-lf-d1w" id="PBX-Gz-5EE"/>
-                <outlet property="nameLabel" destination="OnB-c5-pxP" id="Org-Rc-F4a"/>
+                <outlet property="popularityLabel" destination="jWe-zu-Ka2" id="NWd-lo-Ra8"/>
+                <outlet property="releaseDateLabel" destination="ekP-hC-atq" id="VlZ-1r-6be"/>
+                <outlet property="titleLabel" destination="OnB-c5-pxP" id="Org-Rc-F4a"/>
             </connections>
             <point key="canvasLocation" x="49" y="31"/>
         </tableViewCell>
