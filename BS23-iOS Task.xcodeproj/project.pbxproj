@@ -30,6 +30,7 @@
 		C191DCE82B0F09B4004D7D8B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		C191DCEA2B0F368E004D7D8B /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		C191DCEE2B0F5772004D7D8B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C191DCF02B0F63DF004D7D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1FD06112B0E7CEE00A54C96 /* BS23-iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BS23-iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 			children = (
 				C1FD06142B0E7CEE00A54C96 /* AppDelegate.swift */,
 				C1FD06162B0E7CEE00A54C96 /* SceneDelegate.swift */,
+				C191DCF02B0F63DF004D7D8B /* Info.plist */,
 				C1FD061D2B0E7CF100A54C96 /* Assets.xcassets */,
 				C1FD063E2B0E922B00A54C96 /* Network */,
 				C191DCEC2B0F54FC004D7D8B /* Model */,
