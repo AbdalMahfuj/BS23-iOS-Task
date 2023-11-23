@@ -2,11 +2,13 @@
 Assignment: iOS Task
 
 
-|                                                                               |
-|                   Brain Station 23 Ltd. iOS Practical Test
-|                       **Name: Abdullah Al MahfugEmail: abdalmahfuj@gmail.com
-|*Phone: 01953720564                                    |
-|_______________________________________________________________________________|
+|-------------------------------------------------------------------------------|
+|                                                                               |<br>
+|                   **Brain Station 23 Ltd. iOS Practical Test**                  |<br>
+|                       **Name:** Abdullah Al Mahfug                              |<br>
+|                       **Email:** abdalmahfuj@gmail.com                          |<br>
+|                       **Phone:** 01953720564                                    |<br>
+|_______________________________________________________________________________|<br>
 
 
 # Brain Station 23 Ltd.
