@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buV-El-3Q7">
-                                <rect key="frame" x="63.666666666666657" y="405.66666666666669" width="265.66666666666674" height="40.666666666666686"/>
+                                <rect key="frame" x="167.33333333333334" y="279.66666666666669" width="265.66666666666663" height="40.666666666666686"/>
                                 <string key="text">Welcome to Brain Station 23 Ltd.
 iOS Practical Test</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -48,7 +48,6 @@ iOS Practical Test</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vTE-oU-FYc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2e-FE-E3s">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -69,7 +68,7 @@ iOS Practical Test</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="40" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xtF-Hl-tBd">
-                                <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="zDP-bC-eg8" id="hpV-GW-W4D"/>
@@ -77,7 +76,7 @@ iOS Practical Test</string>
                                 </connections>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Search here" translatesAutoresizingMaskIntoConstraints="NO" id="K5r-wP-GUF">
-                                <rect key="frame" x="20" y="79" width="353" height="50"/>
+                                <rect key="frame" x="20" y="20" width="560" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hp1-Oz-yuy"/>
                                 </constraints>
@@ -87,7 +86,7 @@ iOS Practical Test</string>
                                 </connections>
                             </searchBar>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="idS-8F-JmN">
-                                <rect key="frame" x="184" y="413.66666666666669" width="25" height="25"/>
+                                <rect key="frame" x="287.66666666666669" y="287.66666666666669" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="4wL-kl-crZ"/>
                                     <constraint firstAttribute="height" constant="25" id="FQJ-eA-3SD"/>
@@ -110,8 +109,8 @@ iOS Practical Test</string>
                     </view>
                     <connections>
                         <outlet property="activityView" destination="idS-8F-JmN" id="jxZ-qZ-fb9"/>
-                        <outlet property="movieSearchbar" destination="K5r-wP-GUF" id="oOa-Wg-JlI"/>
                         <outlet property="moviesTableView" destination="xtF-Hl-tBd" id="94o-il-uv5"/>
+                        <outlet property="searchbar" destination="K5r-wP-GUF" id="oOa-Wg-JlI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsA-6S-mKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -127,19 +126,19 @@ iOS Practical Test</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-Df-TR8">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgB-9g-m9I">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="634.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="841.66666666666663"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qly-H9-Wd5">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="qly-H9-Wd5" secondAttribute="height" id="OMY-UE-qJX"/>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5tz-nL-gtc">
-                                                <rect key="frame" x="15" y="423.00000000000006" width="363" height="191.66666666666669"/>
+                                                <rect key="frame" x="15" y="630" width="570" height="191.66666666666663"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEb-9o-zoV">
                                                         <rect key="frame" x="0.0" y="0.0" width="33" height="20.333333333333332"/>
