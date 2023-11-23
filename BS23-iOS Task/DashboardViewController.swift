@@ -99,7 +99,6 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let detailShowVC = DetailShowViewController.initVC(result: results[indexPath.row])
